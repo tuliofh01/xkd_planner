@@ -19,7 +19,6 @@ pub use services::database::Database;
 /// Shared application state, handed to Tauri commands through `tauri::State`.
 #[derive(Clone)]
 /// Shared application services managed by Tauri state.
-
 pub struct AppServices {
     pub db: Database,
     pub auth: Authentication,
@@ -28,13 +27,11 @@ pub struct AppServices {
 impl AppServices {
     // HINT: Database::connect(url), db.init(), then Authentication::new(db.clone()).
     /// Connects to the database, initializes schema, and builds services.
-
     pub async fn new(url: &str) -> Result<Self, sqlx::Error> {
         todo!("connect and initialise the database")
     }
 
     /// Builds services from an existing database handle.
-
     pub fn from(db: Database) -> Self {
         todo!("build Authentication from a clone of db")
     }

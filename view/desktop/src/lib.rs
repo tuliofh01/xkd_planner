@@ -121,7 +121,6 @@ async fn list_timeline(
 }
 
 /// Runs the Tauri application.
-
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     let services = tauri::async_runtime::block_on(

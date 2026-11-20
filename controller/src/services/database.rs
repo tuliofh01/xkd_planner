@@ -8,7 +8,6 @@ use sqlx::sqlite::{SqlitePool, SqliteRow};
 /// Thin wrapper around a `SqlitePool`. All persistence lives here.
 #[derive(Debug, Clone)]
 /// Database handle wrapping a SQLite connection pool.
-
 pub struct Database {
     pub pool: SqlitePool,
 }

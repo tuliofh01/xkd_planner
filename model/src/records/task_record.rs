@@ -5,7 +5,6 @@ pub const STATUS_COMPLETED: &str = "completed";
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 /// Task record for a user's daily plan.
-
 pub struct Task {
     pub id: String,
     pub user_id: String,
@@ -19,7 +18,6 @@ pub struct Task {
 impl Task {
     // HINT: start every task with STATUS_PENDING.
     /// Creates a pending task.
-
     pub fn new(
         id: String,
         user_id: String,
@@ -33,14 +31,12 @@ impl Task {
 
     // HINT: compare self.status with STATUS_COMPLETED.
     /// Returns true when the task status is completed.
-
     pub fn is_completed(&self) -> bool {
         todo!("return self.status == STATUS_COMPLETED")
     }
 
     // HINT: mutate self.status.
     /// Marks the task as completed.
-
     pub fn complete(&mut self) {
         todo!("set self.status to STATUS_COMPLETED.to_string()")
     }
