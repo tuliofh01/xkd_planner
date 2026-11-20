@@ -66,8 +66,7 @@ export interface TimelineEntry {
 export const api = {
   register: (username: string, password: string) =>
     invoke<User>("register", { username, password }),
-  login: (username: string, password: string) =>
-    invoke<User>("login", { username, password }),
+  login: (username: string, password: string) => invoke<User>("login", { username, password }),
   listUsers: () => invoke<User[]>("list_users"),
   listTasks: (userId: string) => invoke<Task[]>("list_tasks", { userId }),
   createTask: (userId: string, title: string, description: string, dueAt: string | null) =>
@@ -81,11 +80,7 @@ export const api = {
     invoke<PtimerSession>("start_timer", { userId, taskId }),
   stopTimer: (id: string) => invoke<PtimerSession>("stop_timer", { id }),
   listTimers: (userId: string) => invoke<PtimerSession[]>("list_timers", { userId }),
-  addTimelineEntry: (
-    userId: string,
-    taskId: string,
-    startsAt: string,
-    endsAt: string | null,
-  ) => invoke<TimelineEntry>("add_timeline_entry", { userId, taskId, startsAt, endsAt }),
+  addTimelineEntry: (userId: string, taskId: string, startsAt: string, endsAt: string | null) =>
+    invoke<TimelineEntry>("add_timeline_entry", { userId, taskId, startsAt, endsAt }),
   listTimeline: (userId: string) => invoke<TimelineEntry[]>("list_timeline", { userId }),
 };
