@@ -1,0 +1,22 @@
+{
+  "React component": {
+    "prefix": "rfc",
+    "body": [
+      "export function ${1:Name}(${2}) {",
+      "  return (",
+      "    <section>",
+      "      ${0}",
+      "    </section>",
+      "  );",
+      "}"
+    ],
+    "description": "React function component"
+  },
+  "useState": {
+    "prefix": "ust",
+    "body": [
+      "const [${1:value}, set${2:Value}] = useState<${3:string}>(${4:\"\"});"
+    ],
+    "description": "React useState hook"
+  }
+}

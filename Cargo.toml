@@ -1,11 +1,11 @@
-[package]
-name = "xkdPlanner"
+[workspace]
+resolver = "2"
+members = [
+    "model",
+    "controller",
+    "view/desktop",
+]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
-
-[dependencies]
-
-[workspace]
-members = [
-    "src/view/src-tauri"
-]

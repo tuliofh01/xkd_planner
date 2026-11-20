@@ -1,0 +1,158 @@
+/*
+ * xkdPlanner — React frontend styles.
+ *
+ * HINT: plain CSS is enough for the MVP. When it grows, consider CSS Modules
+ * (rename to App.module.css) so class names stay scoped per component.
+ */
+
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background: #f5f6f8;
+  color: #1c1e21;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1c1e21;
+    color: #e6e8eb;
+  }
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.app__header p {
+  margin: 0.25rem 0 1.5rem;
+  opacity: 0.7;
+}
+
+.app__error {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #ffe0e0;
+  color: #8a1c1c;
+}
+
+.app__tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  border: 1px solid #d5d7db;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .panel {
+    background: #26282c;
+    border-color: #3a3d42;
+  }
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.field span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.panel__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #2f6fed;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #2f6fed;
+  color: #2f6fed;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.is-active,
+.app__tabs button.is-active {
+  background: #2f6fed;
+  color: #ffffff;
+}
+
+input,
+select {
+  padding: 0.45rem;
+  border: 1px solid #c4c7cc;
+  border-radius: 8px;
+  font: inherit;
+  background: transparent;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #0000001a;
+}
+
+.is-done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.is-empty,
+.muted {
+  opacity: 0.6;
+}

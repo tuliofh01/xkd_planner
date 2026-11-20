@@ -1,0 +1,18 @@
+{
+  "Tauri invoke wrapper": {
+    "prefix": "inv",
+    "body": [
+      "${1:name}: (${2:args}) => invoke<${3:T}>('${4:command}', { ${5} }),"
+    ],
+    "description": "Typed invoke wrapper entry"
+  },
+  "Interface": {
+    "prefix": "iface",
+    "body": [
+      "export interface ${1:Name} {",
+      "  ${2:field}: ${3:string};",
+      "}"
+    ],
+    "description": "TypeScript interface"
+  }
+}

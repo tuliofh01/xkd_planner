@@ -1,0 +1,107 @@
+{
+  "format_on_save": "on",
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 100,
+  "tab_size": 2,
+  "hard_tabs": false,
+  "show_whitespaces": "selection",
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/target",
+    "**/dist",
+    "**/view/desktop/gen/schemas",
+    "**/*.db",
+    "**/*.db-shm",
+    "**/*.db-wal",
+    "**/logs",
+    "**/.DS_Store"
+  ],
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "show_completion_documentation": true,
+  "show_completions_on_input": true,
+  "auto_signature_help": true,
+  "show_signature_help_after_edits": true,
+  "snippet_sort_order": "top",
+  "hover_popover_enabled": true,
+  "diagnostics": {
+    "include_warnings": true
+  },
+  "languages": {
+    "Rust": {
+      "tab_size": 4,
+      "hard_tabs": false,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JSON": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on"
+    },
+    "JSONC": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on"
+    },
+    "CSS": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on"
+    },
+    "HTML": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "format_on_save": "on"
+    },
+    "Markdown": {
+      "soft_wrap": "preferred_line_length"
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        },
+        "cargo": {
+          "allTargets": true
+        },
+        "procMacro": {
+          "enable": true
+        }
+      }
+    }
+  }
+}

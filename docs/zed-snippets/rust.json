@@ -1,0 +1,31 @@
+{
+  "Tauri command": {
+    "prefix": "tcmd",
+    "body": [
+      "#[tauri::command]",
+      "async fn ${1:name}(state: tauri::State<'_, AppServices>${2}) -> Result<${3:T}, String> {",
+      "    ${0:todo!()}",
+      "}"
+    ],
+    "description": "Create a Tauri command handler skeleton"
+  },
+  "Async controller handler": {
+    "prefix": "ahandler",
+    "body": [
+      "pub async fn ${1:name}(db: &Database${2}) -> Result<${3:T}, sqlx::Error> {",
+      "    ${0:todo!()}",
+      "}"
+    ],
+    "description": "Create an async controller handler"
+  },
+  "Struct with derives": {
+    "prefix": "sder",
+    "body": [
+      "#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]",
+      "pub struct ${1:Name} {",
+      "    pub ${2:field}: ${3:String},",
+      "}"
+    ],
+    "description": "Serializable struct skeleton"
+  }
+}

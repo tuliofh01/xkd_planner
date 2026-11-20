@@ -1,0 +1,90 @@
+[
+  {
+    "label": "frontend: install",
+    "command": "npm",
+    "args": ["--prefix", "$ZED_WORKTREE_ROOT/view/web", "install"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "frontend: dev",
+    "command": "npm",
+    "args": ["--prefix", "$ZED_WORKTREE_ROOT/view/web", "run", "dev"],
+    "reveal": "always",
+    "use_new_terminal": true
+  },
+  {
+    "label": "frontend: build",
+    "command": "npm",
+    "args": ["--prefix", "$ZED_WORKTREE_ROOT/view/web", "run", "build"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "frontend: lint",
+    "command": "npm",
+    "args": ["--prefix", "$ZED_WORKTREE_ROOT/view/web", "run", "lint"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "cargo: check",
+    "command": "cargo",
+    "args": ["check", "--workspace", "--manifest-path", "$ZED_WORKTREE_ROOT/Cargo.toml"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "cargo: test",
+    "command": "cargo",
+    "args": ["test", "--workspace", "--manifest-path", "$ZED_WORKTREE_ROOT/Cargo.toml"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "cargo: clippy",
+    "command": "cargo",
+    "args": [
+      "clippy",
+      "--workspace",
+      "--all-targets",
+      "--manifest-path",
+      "$ZED_WORKTREE_ROOT/Cargo.toml"
+    ],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "cargo: fmt",
+    "command": "cargo",
+    "args": ["fmt", "--all", "--manifest-path", "$ZED_WORKTREE_ROOT/Cargo.toml"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "app: build script",
+    "command": "bash",
+    "args": ["$ZED_WORKTREE_ROOT/scripts/build_app.sh"],
+    "reveal": "always",
+    "use_new_terminal": false
+  },
+  {
+    "label": "app: dev run",
+    "command": "bash",
+    "args": ["$ZED_WORKTREE_ROOT/scripts/run_app.sh"],
+    "reveal": "always",
+    "use_new_terminal": true
+  },
+  {
+    "label": "tauri: dev",
+    "command": "cargo",
+    "args": [
+      "tauri",
+      "dev",
+      "--config",
+      "$ZED_WORKTREE_ROOT/view/desktop/tauri.conf.json"
+    ],
+    "reveal": "always",
+    "use_new_terminal": true
+  }
+]

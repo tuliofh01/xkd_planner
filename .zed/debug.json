@@ -1,0 +1,21 @@
+[
+  {
+    "label": "Debug Tauri app (CodeLLDB)",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "$ZED_WORKTREE_ROOT/target/debug/app",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "env": {
+      "RUST_LOG": "info",
+      "RUST_BACKTRACE": "1"
+    },
+    "build": {
+      "command": "cargo",
+      "args": [
+        "build",
+        "--manifest-path",
+        "$ZED_WORKTREE_ROOT/view/desktop/Cargo.toml"
+      ]
+    }
+  }
+]

@@ -1,2 +1,25 @@
+# Environment
 .env
-/target
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+/target/
+**/target/
+/dist/
+view/desktop/gen/schemas/
+
+# Local DB/runtime
+*.db
+*.db-shm
+*.db-wal
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.zed/*.local.json
+.zed/settings.local.json
